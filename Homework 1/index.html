@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework 1</title>
-
+    <title>Sign Up Form</title>
     <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
+        .input-group {
+            display: flex;
+            width: 80%;
+        }
+
+        .input-group input {
+            flex: 1;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
     </style>
-    
 </head>
 
 <body>
-    
+    <div class="container">
+        <h1>Sign Up</h1>
+        <div class="input-group">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+        </div>
+        <div class="input-group">
+            <input type="text" placeholder="Mobile No.">
+        </div>
+        <div class="input-group">
+            <input type="text" placeholder="Email Address">
+        </div>
+        <div class="input-group">
+            <input type="text" placeholder="Password">
+            <input type="text" placeholder="Confirm Password">
+        </div>
+    </div>
 </body>
+
 
 </html>
