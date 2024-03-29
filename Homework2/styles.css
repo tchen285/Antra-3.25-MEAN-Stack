@@ -24,6 +24,10 @@ span {
     text-decoration: underline;
 }
 
+.special {
+    color: blue;
+}
+
 ul {
     display: flex;
     gap: 10px;
