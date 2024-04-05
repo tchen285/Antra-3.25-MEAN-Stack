@@ -1,0 +1,73 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    text-align: center;
+}
+
+.container {
+    display: flex; 
+}
+
+.available-courses,
+.selected-courses {
+    flex: 1;
+    overflow: auto;
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px; 
+    border: 1px solid gray;
+}
+
+.available-courses ul,
+.selected-courses ul {
+    padding: 0;
+}
+
+.available-courses ul li,
+.selected-courses ul li {
+    border: 1px solid gray; 
+    padding: 5px; 
+    margin: 5px 0; 
+    box-sizing: border-box; 
+}
+
+.dynamic-list-item {
+    list-style-type: none;
+}
+
+.selected {
+    background-color:blanchedalmond;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px; 
+}
+
+.button-container h2 {
+    margin-right: 10px; 
+}
+
+.button-container button {
+    padding: 5px 10px; 
+    font-size: 14px; 
+}
+
+h3 {
+    font-size: 20px; 
+    color: #333; 
+}
