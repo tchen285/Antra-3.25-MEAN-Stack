@@ -79,12 +79,15 @@ const Controller = ((view, model) => {
         const btn = document.querySelector(domStr.addBtn)
 
         btn.addEventListener('click', () => {
-            let item = {
-                title: userInput.value
+            const inputValue = userInput.value.trim();
+            if (inputValue !== '') {
+                let item = { 
+                    title: userInput.value 
+                }
+                const newTodos = [item, ...newState.getTodoList()] 
+                newState.setTodoList(newTodos) 
+                userInput.value = "" 
             }
-            const newTodos = [item, ...newState.getTodoList()]
-            newState.setTodoList(newTodos)
-            userInput.value = "";
         })
     }
 
