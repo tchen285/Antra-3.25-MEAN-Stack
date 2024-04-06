@@ -8,6 +8,8 @@ body {
 
 .container {
     display: flex; 
+    width: 600px;
+    margin: 0 auto;
 }
 
 .available-courses,
@@ -15,14 +17,11 @@ body {
     flex: 1;
     overflow: auto;
     border: 1px solid gray;
-    padding: 10px;
+    font-size: small;
 }
 
-ul {
-    list-style: none;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.available-courses {
+    margin-right: 180px
 }
 
 li {
@@ -30,25 +29,16 @@ li {
     border: 1px solid gray;
 }
 
-.available-courses ul,
-.selected-courses ul {
-    padding: 0;
-}
-
-.available-courses ul li,
-.selected-courses ul li {
-    border: 1px solid gray; 
-    padding: 5px; 
-    margin: 5px 0; 
-    box-sizing: border-box; 
-}
-
 .dynamic-list-item {
     list-style-type: none;
 }
 
+li:nth-child(even) {
+    background-color: rgb(221, 239, 221) ; 
+}
+
 .selected {
-    background-color:blanchedalmond;
+    background-color:cornflowerblue;
 }
 
 .button-container {
@@ -65,9 +55,4 @@ li {
 .button-container button {
     padding: 5px 10px; 
     font-size: 14px; 
-}
-
-h3 {
-    font-size: 20px; 
-    color: #333; 
 }
