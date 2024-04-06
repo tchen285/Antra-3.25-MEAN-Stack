@@ -11,7 +11,7 @@ const View = (() => {
     }
 
     const creatTemp = (arr) => {
-        let temp = ''
+        let temp = '<h4>Available Courses</h4>'
         let isRequired = ''
         arr.forEach((course) => {
             if (course.required === true) {
