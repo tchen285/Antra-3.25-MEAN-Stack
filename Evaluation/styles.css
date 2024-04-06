@@ -2,6 +2,14 @@
     font-family: Arial, sans-serif;
 }
 
+h1 {
+    font-size: x-large;
+}
+
+h2 {
+    font-size: large;
+}
+
 body {
     text-align: center;
 }
@@ -15,8 +23,8 @@ body {
 .available-courses,
 .selected-courses {
     flex: 1;
-    overflow: auto;
-    border: 1px solid gray;
+    overflow-y: scroll;
+    border: 2px solid black;
     font-size: small;
 }
 
@@ -26,15 +34,15 @@ body {
 
 li {
     margin-bottom: 10px; 
-    border: 1px solid gray;
+    border: 2px solid black;
 }
 
 .dynamic-list-item {
     list-style-type: none;
 }
 
-li:nth-child(even) {
-    background-color: rgb(221, 239, 221) ; 
+.available-courses li:nth-child(even) {
+    background-color: rgb(221, 239, 221); 
 }
 
 .selected {
