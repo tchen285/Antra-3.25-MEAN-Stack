@@ -73,13 +73,13 @@ const Controller = ((view, model) => {
     }
 
     const updateTotalCredit = () => {
-        const totalCreditElement = document.querySelector('h2'); 
-        const selectedCourses = document.querySelectorAll('.dynamic-list-item.selected'); 
+        const totalCreditElement = document.querySelector('h2');
+        const selectedCourses = document.querySelectorAll('.dynamic-list-item.selected');
 
 
         let totalCredit = 0;
         selectedCourses.forEach(course => {
-            totalCredit += parseInt(course.dataset.credit); 
+            totalCredit += parseInt(course.dataset.credit);
         });
 
 
@@ -98,23 +98,23 @@ const Controller = ((view, model) => {
             if (target.classList.contains('dynamic-list-item')) {
                 target.classList.toggle('selected');
                 updateTotalCredit();
- 
+
                 if (target.classList.contains('selected')) {
-                    target.style.backgroundColor = 'cornflowerblue'; 
+                    target.style.backgroundColor = 'cornflowerblue';
                 } else {
-                    target.style.backgroundColor = ''; 
+                    target.style.backgroundColor = '';
                 }
             }
         });
     }
-    
+
 
     document.addEventListener('DOMContentLoaded', () => {
         toggleCourseSelection();
     });
 
     const addCourse = () => {
-        const selectButton = document.getElementById('selectButton'); 
+        const selectButton = document.getElementById('selectButton');
 
         selectButton.addEventListener('click', () => {
             const totalCredit = updateTotalCredit();
@@ -132,23 +132,19 @@ const Controller = ((view, model) => {
     }
 
     const showSelectedCourses = () => {
-        const selectedCourses = document.querySelectorAll('.dynamic-list-item.selected'); 
-        const selectedCoursesList = document.querySelector(domStr.selected_courses + ' ul'); 
-    
-   
+        const selectedCourses = document.querySelectorAll('.dynamic-list-item.selected');
+        const selectedCoursesList = document.querySelector(domStr.selected_courses + ' ul');
+
+
         selectedCoursesList.innerHTML = '';
-    
+
         selectedCourses.forEach(course => {
             const newCourseItem = document.createElement('li');
-            newCourseItem.textContent = course.textContent;
-
-            const lineBreak = document.createElement('br');
-            newCourseItem.appendChild(lineBreak);
-
+            newCourseItem.innerHTML = course.innerHTML;
             selectedCoursesList.appendChild(newCourseItem);
         });
     }
-    
+
     const bootstrap = () => {
         init()
         addCourse()
