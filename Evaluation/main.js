@@ -96,11 +96,18 @@ const Controller = ((view, model) => {
         document.addEventListener('click', (event) => {
             const target = event.target;
             if (target.classList.contains('dynamic-list-item')) {
-                target.classList.toggle('selected'); 
-                updateTotalCredit(); 
+                target.classList.toggle('selected');
+                updateTotalCredit();
+ 
+                if (target.classList.contains('selected')) {
+                    target.style.backgroundColor = 'cornflowerblue'; 
+                } else {
+                    target.style.backgroundColor = ''; 
+                }
             }
         });
     }
+    
 
     document.addEventListener('DOMContentLoaded', () => {
         toggleCourseSelection();
