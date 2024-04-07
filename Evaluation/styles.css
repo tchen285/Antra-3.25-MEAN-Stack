@@ -27,15 +27,35 @@ body {
     overflow-y: scroll;
     border: 2px solid black;
     font-size: small;
+
+
+    scrollbar-width: thin;  /* firefox */
 }
+
+.available-courses::-webkit-scrollbar,
+.selected-courses::-webkit-scrollbar {
+    width: 12px;  
+}
+
+.available-courses::-webkit-scrollbar-thumb,
+.selected-courses::-webkit-scrollbar-thumb {
+    background-color: gray; 
+    border-radius: 20px; 
+    border: 3px solid white; 
+}
+
+.available-courses::-webkit-scrollbar-track,
+.selected-courses::-webkit-scrollbar-track {
+    background: white; 
+}
+
 
 .available-courses {
     margin-right: 180px
 }
 
 li {
-    margin-bottom: 10px; 
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .dynamic-list-item {
