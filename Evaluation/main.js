@@ -11,7 +11,7 @@ const View = (() => {
     }
 
     const creatTemp = (arr) => {
-        let temp = '<h4>Available Courses</h4>'
+        let temp = `<h4>Available Courses</h4>`
         let isRequired = ''
         arr.forEach((course) => {
             if (course.required === true) {
@@ -22,6 +22,7 @@ const View = (() => {
             temp += `<li class="dynamic-list-item" data-credit="${course.credit}">${course.courseName}<br>Course Type: ${isRequired}<br>Course Credit: ${course.credit}</li>`;
 
         })
+
         return temp
     }
 
